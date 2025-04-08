@@ -23,6 +23,20 @@ header {
     border-bottom: 4px solid #b89c7e;
 }
 
+header nav a {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 16px;
+    text-decoration: none;
+    color: #4d3827;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #7a5e42;
+    text-decoration: underline;
+}
+
 /* Navigation */
 nav {
     background-color: #e0c7ad;
@@ -65,9 +79,17 @@ section {
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-h2 {
+h1, h2 {
     font-family: 'Playfair Display', serif;
     color: #7a5e42;
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+h2 {
     font-size: 26px;
     margin-bottom: 15px;
     border-bottom: 2px solid #b89c7e;
@@ -75,12 +97,13 @@ h2 {
     padding-bottom: 5px;
 }
 
-/* Gallery */
+/* Gallery - used on homepage and all gallery pages */
 .gallery {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 18px;
+    margin-top: 25px;
 }
 
 .gallery-item {
@@ -91,6 +114,11 @@ h2 {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.12);
     background-color: #fef8f0;
     padding: 8px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.03);
 }
 
 .gallery-item img {
@@ -99,6 +127,20 @@ h2 {
     object-fit: cover;
     border-radius: 10px;
     border: 2px solid #d2b89b;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item img:hover {
+    opacity: 0.95;
+}
+
+/* Optional label for images */
+.thumb-label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #4d3827;
+    margin-top: 8px;
+    font-family: 'Playfair Display', serif;
 }
 
 /* Contact Cards */
